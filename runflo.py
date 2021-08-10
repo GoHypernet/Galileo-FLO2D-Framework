@@ -38,6 +38,8 @@ try:
         flo2dexe = WindowsPath('C:/flo2d/FLOPRO.exe')
     else:
         print('Using FLOPRO executable supplied by user')
+        shutil.move(flo2dexe, WindowsPath('C:/flo2d/FLOPRO.exe'))
+        flo2dexe = WindowsPath('C:/flo2d/FLOPRO.exe')
         
     # form the contents of the project.bat file, run the plan, then copy it to destination
     runcontents = f'\n{str(flo2dexe)}'
@@ -72,9 +74,9 @@ stdout = None
 while proc.poll() == None: # Poll returns null while process is running
     sys.stdout.flush()
     if (not os.path.isfile(summary_file)) : 
-        time.sleep(5)
+        time.sleep(2)
     else :
-        time.sleep(10)
+        time.sleep(5)
         # don't print to screen if nothing has changed
         new_stat = os.stat(summary_file)[6]
         if new_stat == old_stat:
