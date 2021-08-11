@@ -38,6 +38,7 @@ try:
         flo2dexe = WindowsPath('C:/flo2d/FLOPRO.exe')
     else:
         print('Using FLOPRO executable supplied by user')
+        os.remove(WindowsPath('C:/flo2d/FLOPRO.exe'))
         shutil.move(flo2dexe, WindowsPath('C:/flo2d/FLOPRO.exe'))
         flo2dexe = WindowsPath('C:/flo2d/FLOPRO.exe')
         
