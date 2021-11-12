@@ -13,9 +13,7 @@
 - **Website**: https://www.flo-2d.com/
 
 ## Notes
-The user must place their flo2d license at the top of their project directory (this is the systemflp.dll file found in thier installation director on thier desktop). 
-The user optionally provide their own FLOPRO.exe and associated DLLs if they so choose by also placing these at the top of their project directory, if they do not provide a 
-FLOPRO.exe, a built-in version of FLOPRO.exe will be selected. 
+The user must place their flo2d license at the top of the Mission directory (this is the systemflp.dll file found in the FLO2D installation directory on their desktop). The user may optionally provide their own FLOPRO.exe and associated DLLs if they so choose by also placing these at the top of the Mission directory. If one is not provided, a built-in version of FLOPRO.exe will be selected.
 
 ## Building
 
